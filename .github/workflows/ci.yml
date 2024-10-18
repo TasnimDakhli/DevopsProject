@@ -46,5 +46,5 @@ jobs:
           
       - name: Push Docker image
         run: |
-          docker tag url_shortener ${{ secrets.DOCKER_USERNAME }}/url-shortener:latest
+          docker tag url-shortener ${{ secrets.DOCKER_USERNAME }}/url-shortener:latest
           docker push ${{ secrets.DOCKER_USERNAME }}/url-shortener:latest
