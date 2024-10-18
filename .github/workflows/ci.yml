@@ -37,7 +37,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-        
+
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
         with:
@@ -46,5 +46,5 @@ jobs:
           
       - name: Push Docker image
         run: |
-          docker tag url_shortener ${{ secrets.DOCKER_USERNAME }}/url_shortener:latest
-          docker push ${{ secrets.DOCKER_USERNAME }}/url_shortener:latest
+          docker tag url_shortener ${{ secrets.DOCKER_USERNAME }}/url-shortener:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/url-shortener:latest
