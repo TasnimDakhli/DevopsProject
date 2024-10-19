@@ -30,7 +30,7 @@ jobs:
         env:
           SECRET_KEY: ${{ secrets.SECRET_KEY }}
         run: |
-          pytest tests.py
+          pytest --cov=app --cov-report=xml --cov-report=html tests.py 
 
   docker_build:
     runs-on: ubuntu-latest
