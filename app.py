@@ -22,6 +22,7 @@ def shorten_url():
 def redirect_url(shortened):
     original_url = url_mapping.get(f'https://tinyurl.com/{shortened}')
     if original_url:
+        #this is an addition 
         return redirect(original_url)
     return jsonify({'error': 'URL not found'}), 404
 
