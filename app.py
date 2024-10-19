@@ -4,6 +4,7 @@ from flask_wtf.csrf import CSRFProtect
 import pyshorteners
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'my-secret-key'
 csrf = CSRFProtect(app)  # Enable CSRF protection
 
 s = pyshorteners.Shortener()
