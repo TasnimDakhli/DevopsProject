@@ -1,10 +1,11 @@
+import os
 from flask import Flask, request, redirect, jsonify
 import pyshorteners
 from flask_wtf.csrf import CSRFProtect
 import pyshorteners
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'my-secret-key'
+app.config['SECRET_KEY'] =  os.getenv('SECRET_KEY')
 csrf = CSRFProtect(app)  # Enable CSRF protection
 
 s = pyshorteners.Shortener()
