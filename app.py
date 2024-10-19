@@ -1,7 +1,11 @@
 from flask import Flask, request, redirect, jsonify
 import pyshorteners
+from flask_wtf.csrf import CSRFProtect
+import pyshorteners
 
 app = Flask(__name__)
+csrf = CSRFProtect(app)  # Enable CSRF protection
+
 s = pyshorteners.Shortener()
 
 # In-memory storage for the shortened URLs
