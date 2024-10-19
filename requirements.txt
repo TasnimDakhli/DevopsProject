@@ -3,3 +3,4 @@ Flask>=2.1.1      # The web framework
 pyshorteners==1.0.1   # The URL shortening library
 pytest==7.1.2        # The testing framework
 pytest-cov
+zipp>=3.19.1 # not directly required, pinned by Snyk to avoid a vulnerability
